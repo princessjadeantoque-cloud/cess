@@ -60,22 +60,22 @@ I'm a 2nd-year Bachelor of Science in Information Technology student at St. John
 <tr>
 <td width="50%" valign="top">
 
-**Enrollment System**
-
+<strong>Enrollment System</strong>
+<br><br>
 A C# web application built as a group and individual academic project. The student side allows editing application details and changing profile photos. The faculty side allows viewing schedules and managing records.
-
-![C#](https://img.shields.io/badge/-C%23-%23A78BFA?style=flat-square)
-![ASP.NET](https://img.shields.io/badge/-.NET-%23A78BFA?style=flat-square)
-
+<br><br>
+<img src="https://img.shields.io/badge/-C%23-%23A78BFA?style=flat-square" alt="C#">
+<img src="https://img.shields.io/badge/-.NET-%23A78BFA?style=flat-square" alt=".NET">
+<br><br>
 [ADD GITHUB REPOSITORY] | [ADD DEMO]
 
 </td>
 <td width="50%" valign="top">
 
-**Jabe Menu**
-
-*[NEEDS VERIFICATION: language and purpose]*
-
+<strong>Jabe Menu</strong>
+<br><br>
+<em>[NEEDS VERIFICATION: language and purpose]</em>
+<br><br>
 [ADD GITHUB REPOSITORY] | [ADD DEMO]
 
 </td>
@@ -92,28 +92,28 @@ All work below is learning and practice — academic and personal projects as a 
 <tr>
 <td width="50%" valign="top">
 
-**Java & JavaScript Development**
-
+<strong>Java & JavaScript Development</strong>
+<br><br>
 Java and JavaScript learning and practice work.
-
-![Java](https://img.shields.io/badge/-Java-%23A78BFA?style=flat-square)
-![JavaScript](https://img.shields.io/badge/-JavaScript-%23A78BFA?style=flat-square)
-
+<br><br>
+<img src="https://img.shields.io/badge/-Java-%23A78BFA?style=flat-square" alt="Java">
+<img src="https://img.shields.io/badge/-JavaScript-%23A78BFA?style=flat-square" alt="JavaScript">
+<br><br>
 [NEEDS VERIFICATION]
-
+<br><br>
 [ADD GITHUB REPOSITORY]
 
 </td>
 <td width="50%" valign="top">
 
-**C# System Development**
-
+<strong>C# System Development</strong>
+<br><br>
 C# system projects, including the Enrollment System web application.
-
-![C#](https://img.shields.io/badge/-C%23-%23A78BFA?style=flat-square)
-
+<br><br>
+<img src="https://img.shields.io/badge/-C%23-%23A78BFA?style=flat-square" alt="C#">
+<br><br>
 Academic project — group and individual work.
-
+<br><br>
 [ADD GITHUB REPOSITORY]
 
 </td>
@@ -121,27 +121,27 @@ Academic project — group and individual work.
 <tr>
 <td width="50%" valign="top">
 
-**C++ Code Showcase**
-
+<strong>C++ Code Showcase</strong>
+<br><br>
 C++ practice exercises and programs.
-
-![C++](https://img.shields.io/badge/-C%2B%2B-%23A78BFA?style=flat-square)
-
+<br><br>
+<img src="https://img.shields.io/badge/-C%2B%2B-%23A78BFA?style=flat-square" alt="C++">
+<br><br>
 [NEEDS VERIFICATION]
-
+<br><br>
 [ADD GITHUB REPOSITORY]
 
 </td>
 <td width="50%" valign="top">
 
-**Hands-On HTML**
-
+<strong>Hands-On HTML</strong>
+<br><br>
 HTML practice pages and exercises.
-
-![HTML](https://img.shields.io/badge/-HTML-%23A78BFA?style=flat-square)
-
+<br><br>
+<img src="https://img.shields.io/badge/-HTML-%23A78BFA?style=flat-square" alt="HTML">
+<br><br>
 [NEEDS VERIFICATION]
-
+<br><br>
 [ADD GITHUB REPOSITORY]
 
 </td>
@@ -149,14 +149,14 @@ HTML practice pages and exercises.
 <tr>
 <td colspan="2" valign="top">
 
-**Java Code Journal**
-
-Java OOP learning journal. Contains 10 programs covering inheritance and polymorphism — themed exercises on movies, sports, technology, and brands (e.g., `Movies1.java`, `Sports1.java`, `Tech1.java`, `Tech2.java`).
-
-![Java](https://img.shields.io/badge/-Java-%23A78BFA?style=flat-square)
-
+<strong>Java Code Journal</strong>
+<br><br>
+Java OOP learning journal. Contains 10 programs covering inheritance and polymorphism — themed exercises on movies, sports, technology, and brands (e.g., <code>Movies1.java</code>, <code>Sports1.java</code>, <code>Tech1.java</code>, <code>Tech2.java</code>).
+<br><br>
+<img src="https://img.shields.io/badge/-Java-%23A78BFA?style=flat-square" alt="Java">
+<br><br>
 Concepts demonstrated: classes, objects, methods, constructors, inheritance, method overriding (polymorphism), packages, encapsulation
-
+<br><br>
 [ADD GITHUB REPOSITORY]
 
 </td>
@@ -194,31 +194,31 @@ Software development is a continuous process of learning, building, making mista
 <tr>
 <td width="120">
 
-![GitHub](https://img.shields.io/badge/-GitHub-%23A78BFA?style=flat-square&logo=github&logoColor=white)
+<img src="https://img.shields.io/badge/-GitHub-%23A78BFA?style=flat-square&logo=github&logoColor=white" alt="GitHub">
 
 </td>
 <td>
 
-[github.com/princessjadeantoque-cloud/cess](https://github.com/princessjadeantoque-cloud/cess)
+<a href="https://github.com/princessjadeantoque-cloud/cess">github.com/princessjadeantoque-cloud/cess</a>
 
 </td>
 </tr>
 <tr>
 <td width="120">
 
-![Email](https://img.shields.io/badge/-Email-%23A78BFA?style=flat-square&logo=gmail&logoColor=white)
+<img src="https://img.shields.io/badge/-Email-%23A78BFA?style=flat-square&logo=gmail&logoColor=white" alt="Email">
 
 </td>
 <td>
 
-[princessjadeantoque@gmail.com](mailto:princessjadeantoque@gmail.com)
+<a href="mailto:princessjadeantoque@gmail.com">princessjadeantoque@gmail.com</a>
 
 </td>
 </tr>
 <tr>
 <td width="120">
 
-![LinkedIn](https://img.shields.io/badge/-LinkedIn-%23A78BFA?style=flat-square&logo=linkedin&logoColor=white)
+<img src="https://img.shields.io/badge/-LinkedIn-%23A78BFA?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn">
 
 </td>
 <td>
@@ -230,7 +230,7 @@ Software development is a continuous process of learning, building, making mista
 <tr>
 <td width="120">
 
-![Portfolio](https://img.shields.io/badge/-Portfolio-%23A78BFA?style=flat-square&logo=vercel&logoColor=white)
+<img src="https://img.shields.io/badge/-Portfolio-%23A78BFA?style=flat-square&logo=vercel&logoColor=white" alt="Portfolio">
 
 </td>
 <td>
@@ -243,25 +243,7 @@ Software development is a continuous process of learning, building, making mista
 
 <div align="center">
 
-**Author:** Princess Jade B. Antoque  
-**2nd-Year BSIT Student**
+<strong>Author:</strong> Princess Jade B. Antoque<br>
+<strong>2nd-Year BSIT Student</strong>
 
 </div>
-
----
-
-## Checklist — What Needs to Be Added
-
-- [x] **School name** — St. John Paul II College of Davao (added)
-- [ ] **Profile photo** — copied to `assets/profile-photo.jpg` from `Profile picture.jpg`. Verify it's clear, well-lit, neutral background, and suitable for a recruiter-friendly portfolio. I could not view the image to confirm.
-- [ ] **GitHub repository links** for all 5 coding journey folders ([ADD GITHUB REPOSITORY] placeholders)
-- [ ] **Enrollment System** repository and demo links ([ADD GITHUB REPOSITORY], [ADD DEMO])
-- [ ] **"Jabe Menu"** — verify language and purpose ([NEEDS VERIFICATION])
-- [ ] **"Jabe Menu"** repository and demo links
-- [ ] **ASP.NET confirmation** — verify this technology is actually used in the Enrollment System
-- [ ] **C++ Code Showcase** — provide source code or descriptions to confirm contents (currently [NEEDS VERIFICATION])
-- [ ] **Java & JavaScript Development** — provide source code or descriptions to confirm programs (currently [NEEDS VERIFICATION])
-- [ ] **Hands-On HTML** — provide source code or descriptions to confirm pages and technologies (currently [NEEDS VERIFICATION])
-- [ ] **LinkedIn URL** ([ADD LATER])
-- [ ] **Personal portfolio URL** ([ADD LATER])
-- [ ] **Screenshots** for all project and folder READMEs

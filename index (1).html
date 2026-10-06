@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Princess Jade B. Antoque | 2nd-Year BSIT Student</title>
+<meta name="description" content="Portfolio of Princess Jade B. Antoque, a 2nd-year BSIT student learning software development by building projects.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A1233'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%23C4B5FD'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F0D18;
+    --tree: #120F1F;
+    --surface: #171426;
+    --surface-2: #1F1B33;
+    --line: #2E2850;
+    --text: #ECE8FA;
+    --muted: #A09ABF;
+    --accent: #C4B5FD;
+    --accent-strong: #A78BFA;
+    --accent-ink: #1A1233;
+    --sans: 'Bricolage Grotesque', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, 'Courier New', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  a { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+  /* Top bar */
+  .nav {
+    position: sticky; top: 0; z-index: 5;
+    background: rgba(15, 13, 24, 0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; min-height: 3.5rem; flex-wrap: wrap; padding-block: .25rem; }
+  .nav ul { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; margin: 0; padding: 0; }
+  .nav a { display: inline-block; color: var(--muted); text-decoration: none; padding: .45rem .65rem; border-radius: 8px; font-size: .95rem; }
+  .nav a:hover { color: var(--text); background: var(--surface); }
+  .nav .brand { color: var(--text); font-weight: 600; padding-left: 0; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: auto 1fr; gap: 2.25rem; align-items: center; padding-block: clamp(2.5rem, 7vw, 5rem); }
+  .avatar, .avatar-fallback {
+    width: 156px; height: 156px; border-radius: 50%;
+    border: 3px solid var(--accent-strong);
+    object-fit: cover; display: block;
+  }
+  .avatar-fallback { display: grid; place-items: center; background: var(--surface-2); color: var(--accent); font: 700 2.4rem var(--mono); }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.7rem); line-height: 1.05; letter-spacing: -.02em; margin: 0 0 .6rem; }
+  .headline { color: var(--accent); font-size: clamp(1.05rem, 2.2vw, 1.3rem); font-weight: 600; margin: 0 0 1rem; clip-path: inset(0 0 0 0); animation: reveal 1.9s steps(48, end) .25s both; }
+  @keyframes reveal { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  .intro { max-width: 58ch; color: var(--muted); margin: 0 0 1.5rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .6rem 1.1rem; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-weight: 600; }
+  .btn:hover { border-color: var(--accent-strong); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .btn.primary:hover { background: #D6CCFF; }
+
+  /* Sections */
+  section { border-top: 1px solid var(--line); padding-block: clamp(2.5rem, 6vw, 4rem); }
+  h2 { font-size: clamp(1.6rem, 3.2vw, 2.15rem); letter-spacing: -.01em; line-height: 1.2; margin: 0 0 1.1rem; }
+  .lead { color: var(--muted); max-width: 62ch; margin: 0 0 1.75rem; }
+
+  .about { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: start; }
+  .about p { margin: 0; max-width: 58ch; }
+  .build { margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--surface); }
+  .build li { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; padding: .8rem 1rem; border-top: 1px solid var(--line); }
+  .build li:first-child { border-top: 0; }
+  .build b { font-family: var(--mono); font-weight: 500; color: var(--accent); }
+  .build span { color: var(--muted); }
+
+  .stack-group + .stack-group { margin-top: 1.5rem; }
+  .stack-group h3 { font-size: 1rem; margin: 0 0 .6rem; color: var(--muted); font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .chip { display: inline-flex; align-items: center; font-family: var(--mono); font-size: .85rem; padding: .3rem .75rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--accent); }
+
+  /* Folder explorer */
+  .explorer { display: grid; grid-template-columns: 290px 1fr; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface); }
+  .tree { display: flex; flex-direction: column; gap: 2px; background: var(--tree); border-right: 1px solid var(--line); padding: .6rem; }
+  .tab { display: flex; align-items: center; gap: .7rem; width: 100%; min-height: 48px; padding: .6rem .8rem; border: 0; border-left: 3px solid transparent; border-radius: 6px; background: transparent; color: var(--muted); font: inherit; font-size: .98rem; text-align: left; cursor: pointer; }
+  .tab:hover { background: var(--surface-2); color: var(--text); }
+  .tab[aria-selected="true"] { background: var(--surface-2); color: var(--text); border-left-color: var(--accent-strong); }
+  .tab .count { margin-left: auto; font: 400 .75rem var(--mono); color: var(--muted); }
+  .ic { display: inline-flex; flex: none; color: var(--accent); }
+
+  .panel { padding: clamp(1.1rem, 3vw, 1.75rem); min-height: 380px; min-width: 0; }
+  .panel h3 { font-size: 1.45rem; line-height: 1.25; margin: 0 0 .5rem; }
+  .panel .desc { margin: 0 0 .9rem; max-width: 62ch; }
+  .panel .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .9rem; }
+  .panel .note { margin: 0 0 .6rem; color: var(--muted); font-size: .95rem; max-width: 62ch; }
+  .crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; margin: 1.25rem 0 .75rem; font: 400 .85rem var(--mono); color: var(--muted); }
+  .crumbs button { border: 0; background: none; color: var(--accent); font: inherit; padding: .25rem .4rem; border-radius: 6px; cursor: pointer; min-height: 32px; }
+  .crumbs button:hover { background: var(--surface-2); }
+  .crumbs .here { color: var(--text); padding: .25rem .4rem; }
+  .listing h4 { font-size: .95rem; margin: 1.25rem 0 .6rem; color: var(--muted); font-weight: 600; }
+  .status { color: var(--muted); margin: 1rem 0; }
+  .error { border: 1px solid var(--line); border-left: 3px solid var(--accent-strong); border-radius: 8px; background: var(--surface-2); padding: .9rem 1rem; }
+  .error p { margin: 0 0 .5rem; }
+  .error p:last-child { margin: 0; }
+
+  .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: .75rem; }
+  .shot { padding: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--muted); text-align: left; cursor: pointer; overflow: hidden; font: inherit; }
+  .shot:hover { border-color: var(--accent-strong); }
+  .shot img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: var(--surface-2); }
+  .shot span { display: block; padding: .4rem .6rem; font: 400 .75rem var(--mono); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  .rows { list-style: none; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .row { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem .8rem; padding: .45rem .8rem; border-top: 1px solid var(--line); min-height: 48px; }
+  .row:first-child { border-top: 0; }
+  .row .name { flex: 1 1 12rem; min-width: 0; font: 400 .9rem var(--mono); overflow-wrap: anywhere; }
+  .row .meta { color: var(--muted); font: 400 .78rem var(--mono); }
+  .row .acts { display: flex; gap: .4rem; }
+  .rowbtn { display: flex; align-items: center; gap: .75rem; flex: 1 1 12rem; min-width: 0; border: 0; background: none; color: var(--text); font: 400 .9rem var(--mono); text-align: left; cursor: pointer; padding: .4rem 0; min-height: 40px; overflow-wrap: anywhere; }
+  .rowbtn:hover { color: var(--accent); }
+  .mini { display: inline-flex; align-items: center; min-height: 36px; padding: .3rem .8rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); color: var(--text); font: 600 .85rem var(--sans); text-decoration: none; cursor: pointer; }
+  .mini:hover { border-color: var(--accent-strong); }
+
+  /* Learning */
+  .learn { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .6rem 2rem; list-style: none; margin: 0; padding: 0; }
+  .learn li { padding: .55rem 0 .55rem 1.1rem; border-left: 2px solid var(--line); }
+
+  .mindset { font-size: clamp(1.2rem, 2.4vw, 1.55rem); line-height: 1.5; max-width: 40em; margin: 0; padding-left: 1.25rem; border-left: 3px solid var(--accent-strong); }
+
+  footer { border-top: 1px solid var(--line); padding-block: 2rem; color: var(--muted); font-size: .95rem; }
+
+  /* Dialogs */
+  dialog { background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 14px; padding: 0; width: min(960px, 94vw); max-height: 90vh; }
+  dialog::backdrop { background: rgba(8, 6, 16, .8); }
+  .dlg-head { display: flex; align-items: center; gap: .75rem; padding: .7rem 1rem; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  .dlg-head .title { flex: 1 1 10rem; min-width: 0; font: 500 .9rem var(--mono); overflow-wrap: anywhere; }
+  #viewer pre { margin: 0; padding: 1rem; overflow: auto; max-height: calc(90vh - 4rem); font: 400 .85rem/1.6 var(--mono); tab-size: 4; white-space: pre; }
+  #lightbox .stage { display: grid; place-items: center; padding: 1rem; background: var(--bg); }
+  #lightbox img { max-width: 100%; max-height: calc(90vh - 8rem); object-fit: contain; display: block; }
+
+  @media (max-width: 860px) {
+    .hero { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about { grid-template-columns: 1fr; gap: 1.5rem; }
+    .explorer { grid-template-columns: 1fr; }
+    .tree { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--line); gap: 4px; }
+    .tab { width: auto; flex: none; white-space: nowrap; border-left: 0; border-bottom: 3px solid transparent; }
+    .tab[aria-selected="true"] { border-bottom-color: var(--accent-strong); }
+    .tab .count { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .headline { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Princess Jade B. Antoque</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#stack">Tech stack</a></li>
+        <li><a href="#journey">Coding journey</a></li>
+        <li><a href="#learning">Learning</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div id="avatar-slot">
+      <img class="avatar" id="avatar" src="assets/profile-photo.jpg" alt="Princess Jade B. Antoque" width="156" height="156">
+    </div>
+    <div>
+      <h1>Princess Jade B. Antoque</h1>
+      <p class="headline">2nd-Year BSIT Student • Aspiring Software Engineer</p>
+      <p class="intro">A 2nd-year BSIT student building small projects to learn how software works. I work with C++, C#, Java, and web technologies, learning through practice, mistakes, and iteration.</p>
+      <div class="actions">
+        <a class="btn primary" href="#journey">Open my folders</a>
+        <a class="btn" href="https://github.com/princessjadeantoque-cloud" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="mailto:princessjadeantoque@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>About me</h2>
+        <p>I'm a 2nd-year Bachelor of Science in Information Technology student. I learn by building small programs and figuring out what breaks. Right now I'm focused on application development and web development, working toward becoming a Software Engineer.</p>
+      </div>
+      <ul class="build" aria-label="What I can build">
+        <li><b>C++</b><span>Programs and practice exercises</span></li>
+        <li><b>C#</b><span>System projects, including an Enrollment System web app</span></li>
+        <li><b>Java</b><span>Programs and OOP projects</span></li>
+        <li><b>Web</b><span>HTML, CSS, and JavaScript pages and applications</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="stack">
+    <div class="wrap">
+      <h2>Tech stack</h2>
+      <p class="lead">Technologies I have worked with as a beginner-level developer.</p>
+      <div class="stack-group">
+        <h3>Languages</h3>
+        <div class="chips">
+          <span class="chip">C++</span><span class="chip">C#</span><span class="chip">Java</span><span class="chip">PHP</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <h3>Tools</h3>
+        <div class="chips">
+          <span class="chip">Visual Studio</span><span class="chip">VS Code</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Canva</span><span class="chip">Microsoft Office</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="wrap">
+      <h2>My coding journey</h2>
+      <p class="lead">Everything here is learning and practice work: academic and personal projects from my time as a 2nd-year BSIT student. Pick a folder to see the files inside it.</p>
+
+      <div class="explorer">
+        <div class="tree" id="tabs" role="tablist" aria-label="Coding journey folders" aria-orientation="vertical"></div>
+        <div class="panel" id="panel" role="tabpanel" tabindex="0"></div>
+      </div>
+      <noscript><p class="status">Turn on JavaScript to browse the folders, or open them on <a href="https://github.com/princessjadeantoque-cloud/cess">GitHub</a>.</p></noscript>
+    </div>
+  </section>
+
+  <section id="learning">
+    <div class="wrap">
+      <h2>Currently learning</h2>
+      <ul class="learn">
+        <li>Programming fundamentals</li>
+        <li>C++, C#, and Java</li>
+        <li>JavaScript, HTML, and CSS</li>
+        <li>PHP</li>
+        <li>Web development</li>
+        <li>Software engineering concepts</li>
+        <li>Git and GitHub workflow</li>
+        <li>Building practical applications</li>
+        <li>Project documentation</li>
+        <li>Clean and maintainable code</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="mindset">
+    <div class="wrap">
+      <h2>Developer mindset</h2>
+      <p class="mindset">Software development is a continuous process of learning, building, making mistakes, and improving. I'm still a student, working through projects one step at a time. Every error is a lesson, and every small fix is progress.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Let's connect</h2>
+      <div class="actions">
+        <a class="btn primary" href="https://github.com/princessjadeantoque-cloud" target="_blank" rel="noopener">github.com/princessjadeantoque-cloud</a>
+        <a class="btn" href="mailto:princessjadeantoque@gmail.com">princessjadeantoque@gmail.com</a>
+      </div>
+      <!-- ADD LATER: LinkedIn and personal portfolio links -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Princess Jade B. Antoque, 2nd-Year BSIT Student</div>
+</footer>
+
+<dialog id="viewer" aria-label="File viewer">
+  <div class="dlg-head">
+    <span class="title" id="viewer-title"></span>
+    <a class="mini" id="viewer-open" href="#" target="_blank" rel="noopener">Open on GitHub</a>
+    <button class="mini" type="button" id="viewer-close">Close</button>
+  </div>
+  <pre><code id="viewer-code"></code></pre>
+</dialog>
+
+<dialog id="lightbox" aria-label="Photo viewer">
+  <div class="dlg-head">
+    <span class="title" id="lb-title"></span>
+    <button class="mini" type="button" id="lb-prev">Previous</button>
+    <button class="mini" type="button" id="lb-next">Next</button>
+    <button class="mini" type="button" id="lb-close">Close</button>
+  </div>
+  <div class="stage"><img id="lb-img" alt=""></div>
+</dialog>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ------------------------------------------------------------------
+     SETTINGS
+     The folder explorer reads the files straight from your GitHub repo.
+     Each "path" must match the folder name in the repo exactly.
+     ------------------------------------------------------------------ */
+  var OWNER = 'princessjadeantoque-cloud';
+  var REPO = 'cess';
+
+  var FOLDERS = [
+    {
+      path: 'Java & JavaScript Development',
+      slug: 'java-javascript',
+      description: 'Java and JavaScript learning and practice work.',
+      tags: ['Java', 'JavaScript']
+      // NEEDS VERIFICATION: describe the actual programs once the folder files are checked
+    },
+    {
+      path: 'C# System Development',
+      slug: 'csharp',
+      description: 'C# system projects, including the Enrollment System web application.',
+      tags: ['C#'],
+      note: 'Academic project, both group and individual work.'
+    },
+    {
+      path: 'C++ Code Showcase',
+      slug: 'cpp',
+      description: 'C++ practice exercises and programs.',
+      tags: ['C++']
+      // NEEDS VERIFICATION: describe the actual programs once the folder files are checked
+    },
+    {
+      path: 'Hands-On HTML&CSS',
+      slug: 'html-css',
+      description: 'HTML and CSS practice pages and exercises.',
+      tags: ['HTML', 'CSS']
+      // NEEDS VERIFICATION: describe the actual pages once the folder files are checked
+    },
+    {
+      path: 'Java Code Journal',
+      slug: 'java-journal',
+      description: 'Java OOP learning journal with 10 programs on inheritance and polymorphism, themed around movies, sports, technology, and brands.',
+      tags: ['Java'],
+      note: 'Concepts shown: classes, objects, methods, constructors, inheritance, method overriding (polymorphism), packages, encapsulation.'
+    }
+  ];
+
+  /* Things that should not show up in the explorer */
+  var HIDE_DIRS = ['bin', 'obj', 'node_modules', 'packages', 'x64', 'x86', 'debug', 'release'];
+  var HIDE_EXT = ['dll', 'pdb', 'exe', 'cache', 'suo', 'user', 'class'];
+  var IMG_EXT = ['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg', 'bmp'];
+  var TEXT_EXT = ['java', 'cs', 'cpp', 'c', 'h', 'hpp', 'js', 'ts', 'html', 'htm', 'css', 'php', 'json', 'xml', 'txt', 'md', 'sql', 'sln', 'csproj', 'cshtml', 'razor', 'config', 'py', 'vb'];
+  var MAX_TEXT_BYTES = 300000;
+
+  /* ------------------------------------------------------------------ */
+
+  var ICONS = {
+    folder: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.2l2 2.2h8.8A1.5 1.5 0 0 1 21 8.7v9.8a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5z"/></svg>',
+    file: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h7l4 4v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4"/></svg>'
+  };
+
+  function icon(name) {
+    var s = document.createElement('span');
+    s.className = 'ic';
+    s.innerHTML = ICONS[name];
+    return s;
+  }
+
+  function el(tag, props) {
+    var n = document.createElement(tag);
+    var kids = Array.prototype.slice.call(arguments, 2);
+    Object.keys(props || {}).forEach(function (k) {
+      var v = props[k];
+      if (v === null || v === undefined || v === false) return;
+      if (k === 'class') n.className = v;
+      else if (k === 'text') n.textContent = v;
+      else if (k.indexOf('on') === 0) n.addEventListener(k.slice(2), v);
+      else n.setAttribute(k, v === true ? '' : v);
+    });
+    kids.forEach(function (kid) {
+      [].concat(kid).forEach(function (k) {
+        if (k === null || k === undefined || k === false) return;
+        n.append(k.nodeType ? k : document.createTextNode(k));
+      });
+    });
+    return n;
+  }
+
+  function ext(name) {
+    var i = name.lastIndexOf('.');
+    return i > 0 ? name.slice(i + 1).toLowerCase() : '';
+  }
+  function fmtSize(b) {
+    if (b < 1024) return b + ' B';
+    if (b < 1048576) return (b / 1024).toFixed(1) + ' KB';
+    return (b / 1048576).toFixed(1) + ' MB';
+  }
+  function encPath(p) { return p.split('/').map(encodeURIComponent).join('/'); }
+  function githubTree(p) { return 'https://github.com/' + OWNER + '/' + REPO + '/tree/HEAD/' + encPath(p); }
+
+  /* Profile photo fallback */
+  var avatar = document.getElementById('avatar');
+  avatar.addEventListener('error', function () {
+    var f = el('div', { class: 'avatar-fallback', role: 'img', 'aria-label': 'Princess Jade B. Antoque', text: 'PJ' });
+    avatar.replaceWith(f);
+  });
+
+  /* Fetch a folder listing from GitHub (cached) */
+  var cache = {};
+  function fetchDir(path) {
+    if (cache[path]) return Promise.resolve(cache[path]);
+    var url = 'https://api.github.com/repos/' + OWNER + '/' + REPO + '/contents/' + encPath(path);
+    return fetch(url, { headers: { Accept: 'application/vnd.github+json' } }).then(function (res) {
+      if (!res.ok) { var e = new Error('HTTP ' + res.status); e.status = res.status; throw e; }
+      return res.json();
+    }).then(function (data) {
+      if (!Array.isArray(data)) { var e = new Error('Not a folder'); e.status = 0; throw e; }
+      cache[path] = data;
+      return data;
+    });
+  }
+
+  function visible(items) {
+    return items.filter(function (it) {
+      var n = it.name;
+      if (n.charAt(0) === '.') return false;
+      if (it.type === 'dir') return HIDE_DIRS.indexOf(n.toLowerCase()) === -1;
+      return HIDE_EXT.indexOf(ext(n)) === -1;
+    });
+  }
+  function byName(a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }); }
+
+  /* ----- Explorer state ----- */
+  var tabsEl = document.getElementById('tabs');
+  var panel = document.getElementById('panel');
+  var tabs = [];
+  var current = 0;
+  var subPath = [];
+  var token = 0;
+
+  function fullPath() { return [FOLDERS[current].path].concat(subPath).join('/'); }
+
+  function buildTabs() {
+    FOLDERS.forEach(function (f, i) {
+      var count = el('span', { class: 'count', id: 'count-' + i });
+      var t = el('button', {
+        class: 'tab', type: 'button', role: 'tab', id: 'tab-' + i,
+        'aria-selected': 'false', 'aria-controls': 'panel', tabindex: '-1',
+        onclick: function () { selectFolder(i); setUrl(i); },
+        onkeydown: function (e) { tabKeys(e, i); }
+      }, icon('folder'), el('span', { text: f.path }), count);
+      tabs.push(t);
+      tabsEl.append(t);
+    });
+  }
+
+  function tabKeys(e, i) {
+    var n = FOLDERS.length, to = null;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') to = (i + 1) % n;
+    else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') to = (i - 1 + n) % n;
+    else if (e.key === 'Home') to = 0;
+    else if (e.key === 'End') to = n - 1;
+    if (to === null) return;
+    e.preventDefault();
+    selectFolder(to);
+    setUrl(to);
+    tabs[to].focus();
+  }
+
+  function setUrl(i) {
+    try {
+      var u = new URL(window.location.href);
+      u.searchParams.set('folder', FOLDERS[i].slug);
+      u.hash = 'journey';
+      history.replaceState(null, '', u);
+    } catch (e) { /* not available when opened as a local file */ }
+  }
+
+  function selectFolder(i) {
+    current = i;
+    subPath = [];
+    tabs.forEach(function (t, k) {
+      t.setAttribute('aria-selected', k === i ? 'true' : 'false');
+      t.setAttribute('tabindex', k === i ? '0' : '-1');
+    });
+    renderPanel();
+  }
+
+  function crumbs() {
+    var wrap = el('nav', { class: 'crumbs', 'aria-label': 'Folder path' });
+    var parts = [FOLDERS[current].path].concat(subPath);
+    parts.forEach(function (p, idx) {
+      if (idx > 0) wrap.append('/');
+      if (idx === parts.length - 1) {
+        wrap.append(el('span', { class: 'here', text: p }));
+      } else {
+        wrap.append(el('button', {
+          type: 'button', text: p,
+          onclick: function () { subPath = subPath.slice(0, idx); renderPanel(); }
+        }));
+      }
+    });
+    return wrap;
+  }
+
+  function renderPanel() {
+    var f = FOLDERS[current];
+    var my = ++token;
+    var listing = el('div', { class: 'listing', 'aria-live': 'polite' }, el('p', { class: 'status', text: 'Loading files...' }));
+    panel.setAttribute('aria-labelledby', 'tab-' + current);
+    panel.replaceChildren(
+      el('h3', { text: f.path }),
+      el('p', { class: 'desc', text: f.description }),
+      el('div', { class: 'tags' }, f.tags.map(function (t) { return el('span', { class: 'chip', text: t }); })),
+      f.note ? el('p', { class: 'note', text: f.note }) : null,
+      crumbs(),
+      listing
+    );
+
+    var path = fullPath();
+    fetchDir(path).then(function (data) {
+      if (my !== token) return;
+      var items = visible(data);
+      listing.replaceChildren.apply(listing, buildListing(items));
+      if (!subPath.length) {
+        var c = document.getElementById('count-' + current);
+        if (c) c.textContent = items.length + (items.length === 1 ? ' item' : ' items');
+      }
+    }).catch(function (err) {
+      if (my !== token) return;
+      var msg = 'The files could not be loaded. Check your internet connection and try again.';
+      if (err.status === 403) msg = 'GitHub is limiting requests from this network right now. Try again in a few minutes.';
+      if (err.status === 404) msg = 'This folder was not found in the repository. Make sure it is pushed to GitHub and the name matches exactly.';
+      listing.replaceChildren(el('div', { class: 'error' },
+        el('p', { text: msg }),
+        el('p', {}, el('a', { href: githubTree(path), target: '_blank', rel: 'noopener', text: 'Open this folder on GitHub' }))
+      ));
+    });
+  }
+
+  function buildListing(items) {
+    var out = [];
+    if (!items.length) {
+      out.push(el('p', { class: 'status', text: 'No files to show in this folder yet.' }));
+      return out;
+    }
+    var dirs = items.filter(function (i) { return i.type === 'dir'; }).sort(byName);
+    var files = items.filter(function (i) { return i.type !== 'dir'; }).sort(byName);
+    var imgs = files.filter(function (i) { return IMG_EXT.indexOf(ext(i.name)) !== -1; });
+    var others = files.filter(function (i) { return IMG_EXT.indexOf(ext(i.name)) === -1; });
+
+    if (dirs.length) {
+      out.push(el('h4', { text: 'Folders' }));
+      out.push(el('ul', { class: 'rows' }, dirs.map(function (d) {
+        return el('li', { class: 'row' },
+          el('button', {
+            class: 'rowbtn', type: 'button',
+            onclick: function () { subPath.push(d.name); renderPanel(); }
+          }, icon('folder'), d.name));
+      })));
+    }
+
+    if (imgs.length) {
+      out.push(el('h4', { text: 'Photos (' + imgs.length + ')' }));
+      out.push(el('div', { class: 'gallery' }, imgs.map(function (im, idx) {
+        return el('button', {
+          class: 'shot', type: 'button', 'aria-label': 'Open photo ' + im.name,
+          onclick: function () { openPhoto(imgs, idx); }
+        }, el('img', { src: im.download_url, alt: im.name, loading: 'lazy' }), el('span', { text: im.name }));
+      })));
+    }
+
+    if (others.length) {
+      out.push(el('h4', { text: 'Files (' + others.length + ')' }));
+      out.push(el('ul', { class: 'rows' }, others.map(function (f) {
+        var canView = TEXT_EXT.indexOf(ext(f.name)) !== -1 && f.size <= MAX_TEXT_BYTES;
+        return el('li', { class: 'row' },
+          icon('file'),
+          el('span', { class: 'name', text: f.name }),
+          el('span', { class: 'meta', text: fmtSize(f.size) }),
+          el('span', { class: 'acts' },
+            canView ? el('button', { class: 'mini', type: 'button', text: 'View', onclick: function () { openCode(f); } }) : null,
+            el('a', { class: 'mini', href: f.html_url, target: '_blank', rel: 'noopener', text: 'Open' })
+          ));
+      })));
+    }
+    return out;
+  }
+
+  /* ----- Code viewer ----- */
+  var viewer = document.getElementById('viewer');
+  var viewerCode = document.getElementById('viewer-code');
+  function openCode(file) {
+    document.getElementById('viewer-title').textContent = file.name;
+    document.getElementById('viewer-open').href = file.html_url;
+    viewerCode.textContent = 'Loading...';
+    viewer.showModal();
+    fetch(file.download_url).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.text();
+    }).then(function (t) {
+      viewerCode.textContent = t;
+    }).catch(function () {
+      viewerCode.textContent = 'This file could not be loaded here. Use "Open on GitHub" instead.';
+    });
+  }
+  document.getElementById('viewer-close').addEventListener('click', function () { viewer.close(); });
+  viewer.addEventListener('click', function (e) { if (e.target === viewer) viewer.close(); });
+
+  /* ----- Photo lightbox ----- */
+  var lightbox = document.getElementById('lightbox');
+  var lbList = [];
+  var lbIndex = 0;
+  function showPhoto() {
+    var p = lbList[lbIndex];
+    var img = document.getElementById('lb-img');
+    img.src = p.download_url;
+    img.alt = p.name;
+    document.getElementById('lb-title').textContent = p.name + '  (' + (lbIndex + 1) + ' of ' + lbList.length + ')';
+    var multi = lbList.length > 1;
+    document.getElementById('lb-prev').hidden = !multi;
+    document.getElementById('lb-next').hidden = !multi;
+  }
+  function openPhoto(list, idx) {
+    lbList = list;
+    lbIndex = idx;
+    showPhoto();
+    lightbox.showModal();
+  }
+  function stepPhoto(d) {
+    lbIndex = (lbIndex + d + lbList.length) % lbList.length;
+    showPhoto();
+  }
+  document.getElementById('lb-prev').addEventListener('click', function () { stepPhoto(-1); });
+  document.getElementById('lb-next').addEventListener('click', function () { stepPhoto(1); });
+  document.getElementById('lb-close').addEventListener('click', function () { lightbox.close(); });
+  lightbox.addEventListener('click', function (e) { if (e.target === lightbox) lightbox.close(); });
+  lightbox.addEventListener('keydown', function (e) {
+    if (lbList.length < 2) return;
+    if (e.key === 'ArrowLeft') stepPhoto(-1);
+    if (e.key === 'ArrowRight') stepPhoto(1);
+  });
+
+  buildTabs();
+  var wanted = new URLSearchParams(window.location.search).get('folder');
+  var start = 0;
+  FOLDERS.forEach(function (f, i) { if (f.slug === wanted) start = i; });
+  selectFolder(start);
+  if (wanted) {
+    var journey = document.getElementById('journey');
+    if (journey) journey.scrollIntoView();
+  }
+})();
+</script>
+</body>
+</html>
