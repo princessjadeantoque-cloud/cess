@@ -5,10 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Princess Jade B. Antoque | 2nd-Year BSIT Student</title>
 <meta name="description" content="Portfolio of Princess Jade B. Antoque, a 2nd-year BSIT student learning software development by building projects.">
+<link rel="canonical" href="https://princessjadeantoque-cloud.github.io/cess/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Princess Jade B. Antoque">
+<meta property="og:title" content="Princess Jade B. Antoque | 2nd-Year BSIT Student">
+<meta property="og:description" content="Aspiring Software Engineer learning through C++, C#, Java, and web projects. Browse my coding journey folders.">
+<meta property="og:url" content="https://princessjadeantoque-cloud.github.io/cess/">
+<meta property="og:image" content="https://princessjadeantoque-cloud.github.io/cess/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Princess Jade B. Antoque, 2nd-Year BSIT Student and Aspiring Software Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Princess Jade B. Antoque | 2nd-Year BSIT Student">
+<meta name="twitter:description" content="Aspiring Software Engineer learning through C++, C#, Java, and web projects.">
+<meta name="twitter:image" content="https://princessjadeantoque-cloud.github.io/cess/assets/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A1233'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' text-anchor='middle' fill='%23C4B5FD'%3E%26lt;/%26gt;%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0F0D18;
@@ -21,6 +35,7 @@
     --accent: #C4B5FD;
     --accent-strong: #A78BFA;
     --accent-ink: #1A1233;
+    --display: 'Syne', 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
     --sans: 'Bricolage Grotesque', 'Segoe UI', system-ui, -apple-system, sans-serif;
     --mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, 'Courier New', monospace;
   }
@@ -37,7 +52,7 @@
     background: var(--bg);
     color: var(--text);
     font-family: var(--sans);
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -58,7 +73,7 @@
   .nav ul { display: flex; flex-wrap: wrap; gap: .25rem; list-style: none; margin: 0; padding: 0; }
   .nav a { display: inline-block; color: var(--muted); text-decoration: none; padding: .45rem .65rem; border-radius: 8px; font-size: .95rem; }
   .nav a:hover { color: var(--text); background: var(--surface); }
-  .nav .brand { color: var(--text); font-weight: 600; padding-left: 0; }
+  .nav .brand { color: var(--text); font: 800 1.1rem var(--display); letter-spacing: -.01em; padding-left: 0; }
 
   /* Hero */
   .hero { display: grid; grid-template-columns: auto 1fr; gap: 2.25rem; align-items: center; padding-block: clamp(2.5rem, 7vw, 5rem); }
@@ -68,10 +83,10 @@
     object-fit: cover; display: block;
   }
   .avatar-fallback { display: grid; place-items: center; background: var(--surface-2); color: var(--accent); font: 700 2.4rem var(--mono); }
-  h1 { font-size: clamp(2.2rem, 5.5vw, 3.7rem); line-height: 1.05; letter-spacing: -.02em; margin: 0 0 .6rem; }
-  .headline { color: var(--accent); font-size: clamp(1.05rem, 2.2vw, 1.3rem); font-weight: 600; margin: 0 0 1rem; clip-path: inset(0 0 0 0); animation: reveal 1.9s steps(48, end) .25s both; }
+  h1 { font: 800 clamp(2.7rem, 7.2vw, 5rem)/1.02 var(--display); letter-spacing: -.03em; margin: 0 0 .8rem; }
+  .headline { color: var(--accent); font-size: clamp(1.2rem, 2.6vw, 1.65rem); font-weight: 600; margin: 0 0 1.1rem; clip-path: inset(0 0 0 0); animation: reveal 1.9s steps(48, end) .25s both; }
   @keyframes reveal { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
-  .intro { max-width: 58ch; color: var(--muted); margin: 0 0 1.5rem; }
+  .intro { max-width: 58ch; color: var(--muted); font-size: 1.2rem; margin: 0 0 1.75rem; }
   .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
   .btn { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .6rem 1.1rem; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--text); text-decoration: none; font-weight: 600; }
   .btn:hover { border-color: var(--accent-strong); }
@@ -80,8 +95,9 @@
 
   /* Sections */
   section { border-top: 1px solid var(--line); padding-block: clamp(2.5rem, 6vw, 4rem); }
-  h2 { font-size: clamp(1.6rem, 3.2vw, 2.15rem); letter-spacing: -.01em; line-height: 1.2; margin: 0 0 1.1rem; }
-  .lead { color: var(--muted); max-width: 62ch; margin: 0 0 1.75rem; }
+  h2 { position: relative; font: 800 clamp(2.2rem, 5vw, 3.4rem)/1.08 var(--display); letter-spacing: -.025em; margin: 0 0 1.4rem; padding-bottom: .7rem; }
+  h2::after { content: ''; position: absolute; left: 0; bottom: 0; width: 3.5rem; height: 4px; border-radius: 2px; background: var(--accent-strong); transition: width .45s cubic-bezier(.3, 1.3, .5, 1); }
+  .lead { color: var(--muted); font-size: 1.2rem; max-width: 62ch; margin: 0 0 1.9rem; }
 
   .about { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: start; }
   .about p { margin: 0; max-width: 58ch; }
@@ -99,14 +115,14 @@
   /* Folder explorer */
   .explorer { display: grid; grid-template-columns: 290px 1fr; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface); }
   .tree { display: flex; flex-direction: column; gap: 2px; background: var(--tree); border-right: 1px solid var(--line); padding: .6rem; }
-  .tab { display: flex; align-items: center; gap: .7rem; width: 100%; min-height: 48px; padding: .6rem .8rem; border: 0; border-left: 3px solid transparent; border-radius: 6px; background: transparent; color: var(--muted); font: inherit; font-size: .98rem; text-align: left; cursor: pointer; }
+  .tab { display: flex; align-items: center; gap: .7rem; width: 100%; min-height: 48px; padding: .6rem .8rem; border: 0; border-left: 3px solid transparent; border-radius: 6px; background: transparent; color: var(--muted); font: inherit; font-size: 1.05rem; text-align: left; cursor: pointer; }
   .tab:hover { background: var(--surface-2); color: var(--text); }
   .tab[aria-selected="true"] { background: var(--surface-2); color: var(--text); border-left-color: var(--accent-strong); }
   .tab .count { margin-left: auto; font: 400 .75rem var(--mono); color: var(--muted); }
   .ic { display: inline-flex; flex: none; color: var(--accent); }
 
   .panel { padding: clamp(1.1rem, 3vw, 1.75rem); min-height: 380px; min-width: 0; }
-  .panel h3 { font-size: 1.45rem; line-height: 1.25; margin: 0 0 .5rem; }
+  .panel h3 { font: 800 clamp(1.6rem, 3.4vw, 2.2rem)/1.15 var(--display); letter-spacing: -.02em; margin: 0 0 .6rem; }
   .panel .desc { margin: 0 0 .9rem; max-width: 62ch; }
   .panel .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .9rem; }
   .panel .note { margin: 0 0 .6rem; color: var(--muted); font-size: .95rem; max-width: 62ch; }
@@ -137,13 +153,50 @@
   .mini { display: inline-flex; align-items: center; min-height: 36px; padding: .3rem .8rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); color: var(--text); font: 600 .85rem var(--sans); text-decoration: none; cursor: pointer; }
   .mini:hover { border-color: var(--accent-strong); }
 
+  [hidden] { display: none !important; }
+  .headrow { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; margin-bottom: .6rem; }
+  .headrow h3 { margin: 0 !important; }
+  .block { margin: 0 0 1.1rem; max-width: 62ch; }
+  .block h4 { font-size: .95rem; margin: 0 0 .4rem; color: var(--muted); font-weight: 600; }
+  .bul { margin: 0; padding-left: 1.2rem; }
+  .bul li { margin: .3rem 0; }
+  .filter { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.1rem 0 .2rem; }
+  .fbtn { min-height: 40px; padding: .3rem 1rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface-2); color: var(--text); font: 600 .9rem var(--sans); cursor: pointer; transition: transform .15s ease, background-color .2s ease, border-color .2s ease, color .2s ease; }
+  .fbtn:hover { border-color: var(--accent-strong); }
+  .fbtn:active { transform: scale(.96); }
+  .fbtn[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  .shot .cap { padding-top: 0; color: var(--text); font: 400 .8rem/1.4 var(--sans); white-space: normal; }
+
   /* Learning */
   .learn { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .6rem 2rem; list-style: none; margin: 0; padding: 0; }
   .learn li { padding: .55rem 0 .55rem 1.1rem; border-left: 2px solid var(--line); }
 
-  .mindset { font-size: clamp(1.2rem, 2.4vw, 1.55rem); line-height: 1.5; max-width: 40em; margin: 0; padding-left: 1.25rem; border-left: 3px solid var(--accent-strong); }
+  .mindset { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 600; line-height: 1.45; max-width: 40em; margin: 0; padding-left: 1.25rem; border-left: 3px solid var(--accent-strong); }
 
   footer { border-top: 1px solid var(--line); padding-block: 2rem; color: var(--muted); font-size: .95rem; }
+
+  /* Title effects: letters lift on hover and pop when pressed or tapped */
+  .fx { cursor: pointer; }
+  .fx .w { display: inline-block; white-space: nowrap; }
+  .fx .ch { display: inline-block; transition: transform .35s cubic-bezier(.3, 1.6, .5, 1), color .25s ease; transition-delay: calc(var(--i) * 22ms); }
+  .fx.pop .ch { animation: pop .8s cubic-bezier(.3, 1.5, .5, 1) both; animation-delay: calc(var(--i) * 32ms); }
+  @keyframes pop {
+    0%   { transform: none; color: var(--text); }
+    35%  { transform: translateY(-.28em) scale(1.2) rotate(-5deg); color: var(--accent); }
+    70%  { transform: translateY(.05em) scale(.97) rotate(2deg); color: var(--accent-strong); }
+    100% { transform: none; color: var(--text); }
+  }
+
+  /* Press and hover feedback */
+  .btn, .mini, .chip, .tab, .shot { transition: transform .15s ease, border-color .2s ease, background-color .2s ease, color .2s ease, box-shadow .2s ease; }
+  .btn:active, .mini:active, .tab:active, .shot:active { transform: translateY(1px) scale(.97); }
+  @media (hover: hover) {
+    .fx:hover .ch { transform: translateY(-.12em); color: var(--accent); }
+    h2:hover::after { width: 8rem; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 0 -3px rgba(167, 139, 250, .45); }
+    .chip:hover { transform: translateY(-2px); border-color: var(--accent-strong); background: var(--surface-2); }
+    .shot:hover { transform: translateY(-3px); }
+  }
 
   /* Dialogs */
   dialog { background: var(--surface); color: var(--text); border: 1px solid var(--line); border-radius: 14px; padding: 0; width: min(960px, 94vw); max-height: 90vh; }
@@ -166,6 +219,9 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .headline { animation: none; }
+    .fx .ch { transition: none; }
+    .fx.pop .ch { animation: none; }
+    .btn, .mini, .chip, .tab, .shot, h2::after { transition: none; }
   }
 </style>
 </head>
@@ -199,6 +255,7 @@
         <a class="btn primary" href="#journey">Open my folders</a>
         <a class="btn" href="https://github.com/princessjadeantoque-cloud" target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="mailto:princessjadeantoque@gmail.com">Email</a>
+        <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </div>
   </div>
@@ -281,6 +338,8 @@
       <div class="actions">
         <a class="btn primary" href="https://github.com/princessjadeantoque-cloud" target="_blank" rel="noopener">github.com/princessjadeantoque-cloud</a>
         <a class="btn" href="mailto:princessjadeantoque@gmail.com">princessjadeantoque@gmail.com</a>
+        <a class="btn" href="https://www.facebook.com/profile.php?id=61594086359312" target="_blank" rel="noopener">Facebook</a>
+      <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
       <!-- ADD LATER: LinkedIn and personal portfolio links -->
     </div>
@@ -328,37 +387,50 @@
       slug: 'java-javascript',
       description: 'Java and JavaScript learning and practice work.',
       tags: ['Java', 'JavaScript']
-      // NEEDS VERIFICATION: describe the actual programs once the folder files are checked
+      // NEEDS VERIFICATION: describe the actual programs, then add  learned: ['...']
     },
     {
       path: 'C# System Development',
       slug: 'csharp',
       description: 'C# system projects, including the Enrollment System web application.',
       tags: ['C#'],
-      note: 'Academic project, both group and individual work.'
+      note: 'Academic project, both group and individual work.',
+      highlights: [
+        'Student side: edit the application, change the profile photo, save the changes, and view the student portal.',
+        'Faculty side: view faculty schedules, and add, edit, and update records.'
+      ]
     },
     {
       path: 'C++ Code Showcase',
       slug: 'cpp',
       description: 'C++ practice exercises and programs.',
       tags: ['C++']
-      // NEEDS VERIFICATION: describe the actual programs once the folder files are checked
+      // NEEDS VERIFICATION: describe the actual programs, then add  learned: ['...']
     },
     {
       path: 'Hands-On HTML&CSS',
       slug: 'html-css',
       description: 'HTML and CSS practice pages and exercises.',
       tags: ['HTML', 'CSS']
-      // NEEDS VERIFICATION: describe the actual pages once the folder files are checked
+      // NEEDS VERIFICATION: describe the actual pages, then add  learned: ['...']
     },
     {
       path: 'Java Code Journal',
       slug: 'java-journal',
       description: 'Java OOP learning journal with 10 programs on inheritance and polymorphism, themed around movies, sports, technology, and brands.',
       tags: ['Java'],
-      note: 'Concepts shown: classes, objects, methods, constructors, inheritance, method overriding (polymorphism), packages, encapsulation.'
+      learned: [
+        'Inheritance and method overriding (polymorphism), practiced through 10 themed programs.',
+        'Classes, objects, methods, constructors, packages, and encapsulation.'
+      ]
     }
   ];
+
+  /* Short captions for photos. Key = the file's path in the repo, value = what it shows.
+     Example: 'C# System Development/1.png': 'Student portal page'
+     Only write what the photo really shows. */
+  var CAPTIONS = {
+  };
 
   /* Things that should not show up in the explorer */
   var HIDE_DIRS = ['bin', 'obj', 'node_modules', 'packages', 'x64', 'x86', 'debug', 'release'];
@@ -452,6 +524,7 @@
   var current = 0;
   var subPath = [];
   var token = 0;
+  var filter = 'all';
 
   function fullPath() { return [FOLDERS[current].path].concat(subPath).join('/'); }
 
@@ -494,6 +567,7 @@
   function selectFolder(i) {
     current = i;
     subPath = [];
+    filter = 'all';
     tabs.forEach(function (t, k) {
       t.setAttribute('aria-selected', k === i ? 'true' : 'false');
       t.setAttribute('tabindex', k === i ? '0' : '-1');
@@ -518,25 +592,58 @@
     return wrap;
   }
 
+  function bullets(title, list) {
+    if (!list || !list.length) return null;
+    return el('div', { class: 'block' },
+      el('h4', { text: title }),
+      el('ul', { class: 'bul' }, list.map(function (t) { return el('li', { text: t }); })));
+  }
+
+  function folderLink(i) {
+    var base = window.location.href.split('#')[0].split('?')[0];
+    return base + '?folder=' + FOLDERS[i].slug + '#journey';
+  }
+
+  function copyLink(btn) {
+    var link = folderLink(current);
+    var label = btn.textContent;
+    function say(msg) {
+      btn.textContent = msg;
+      setTimeout(function () { btn.textContent = label; }, 1800);
+    }
+    function manual() { window.prompt('Copy this link (Ctrl + C):', link); }
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(link).then(function () { say('Link copied'); }, manual);
+    } else {
+      manual();
+    }
+  }
+
   function renderPanel() {
     var f = FOLDERS[current];
     var my = ++token;
     var listing = el('div', { class: 'listing', 'aria-live': 'polite' }, el('p', { class: 'status', text: 'Loading files...' }));
     panel.setAttribute('aria-labelledby', 'tab-' + current);
+    var copyBtn = el('button', { class: 'mini', type: 'button', text: 'Copy link' });
+    copyBtn.addEventListener('click', function () { copyLink(copyBtn); });
     panel.replaceChildren(
-      el('h3', { text: f.path }),
+      el('div', { class: 'headrow' }, el('h3', { text: f.path }), copyBtn),
       el('p', { class: 'desc', text: f.description }),
       el('div', { class: 'tags' }, f.tags.map(function (t) { return el('span', { class: 'chip', text: t }); })),
       f.note ? el('p', { class: 'note', text: f.note }) : null,
+      bullets('What it does', f.highlights),
+      bullets('What I learned', f.learned),
       crumbs(),
       listing
     );
+
+    applyFx(panel.querySelector('h3'));
 
     var path = fullPath();
     fetchDir(path).then(function (data) {
       if (my !== token) return;
       var items = visible(data);
-      listing.replaceChildren.apply(listing, buildListing(items));
+      paint(listing, items);
       if (!subPath.length) {
         var c = document.getElementById('count-' + current);
         if (c) c.textContent = items.length + (items.length === 1 ? ' item' : ' items');
@@ -553,7 +660,14 @@
     });
   }
 
-  function buildListing(items) {
+  function paint(listing, items) {
+    listing.replaceChildren.apply(listing, buildListing(items, function (f) {
+      filter = f;
+      paint(listing, items);
+    }));
+  }
+
+  function buildListing(items, setFilter) {
     var out = [];
     if (!items.length) {
       out.push(el('p', { class: 'status', text: 'No files to show in this folder yet.' }));
@@ -563,6 +677,19 @@
     var files = items.filter(function (i) { return i.type !== 'dir'; }).sort(byName);
     var imgs = files.filter(function (i) { return IMG_EXT.indexOf(ext(i.name)) !== -1; });
     var others = files.filter(function (i) { return IMG_EXT.indexOf(ext(i.name)) === -1; });
+
+    if (imgs.length && others.length) {
+      out.push(el('div', { class: 'filter', role: 'group', 'aria-label': 'Show' },
+        [['all', 'All'], ['photos', 'Photos (' + imgs.length + ')'], ['files', 'Code and files (' + others.length + ')']].map(function (o) {
+          return el('button', {
+            class: 'fbtn', type: 'button', text: o[1],
+            'aria-pressed': filter === o[0] ? 'true' : 'false',
+            onclick: function () { setFilter(o[0]); }
+          });
+        })));
+    } else {
+      filter = 'all';
+    }
 
     if (dirs.length) {
       out.push(el('h4', { text: 'Folders' }));
@@ -575,17 +702,20 @@
       })));
     }
 
-    if (imgs.length) {
+    if (imgs.length && filter !== 'files') {
       out.push(el('h4', { text: 'Photos (' + imgs.length + ')' }));
       out.push(el('div', { class: 'gallery' }, imgs.map(function (im, idx) {
+        var cap = CAPTIONS[im.path] || '';
         return el('button', {
           class: 'shot', type: 'button', 'aria-label': 'Open photo ' + im.name,
           onclick: function () { openPhoto(imgs, idx); }
-        }, el('img', { src: im.download_url, alt: im.name, loading: 'lazy' }), el('span', { text: im.name }));
+        }, el('img', { src: im.download_url, alt: cap || im.name, loading: 'lazy' }),
+           el('span', { text: im.name }),
+           cap ? el('span', { class: 'cap', text: cap }) : null);
       })));
     }
 
-    if (others.length) {
+    if (others.length && filter !== 'photos') {
       out.push(el('h4', { text: 'Files (' + others.length + ')' }));
       out.push(el('ul', { class: 'rows' }, others.map(function (f) {
         var canView = TEXT_EXT.indexOf(ext(f.name)) !== -1 && f.size <= MAX_TEXT_BYTES;
@@ -630,8 +760,9 @@
     var p = lbList[lbIndex];
     var img = document.getElementById('lb-img');
     img.src = p.download_url;
-    img.alt = p.name;
-    document.getElementById('lb-title').textContent = p.name + '  (' + (lbIndex + 1) + ' of ' + lbList.length + ')';
+    var cap = CAPTIONS[p.path] || '';
+    img.alt = cap || p.name;
+    document.getElementById('lb-title').textContent = p.name + (cap ? ': ' + cap : '') + '  (' + (lbIndex + 1) + ' of ' + lbList.length + ')';
     var multi = lbList.length > 1;
     document.getElementById('lb-prev').hidden = !multi;
     document.getElementById('lb-next').hidden = !multi;
@@ -656,7 +787,45 @@
     if (e.key === 'ArrowRight') stepPhoto(1);
   });
 
+  /* Letter effect for titles */
+  function applyFx(node) {
+    if (!node || node.getAttribute('data-fx')) return;
+    var text = node.textContent;
+    var n = 0;
+    node.setAttribute('data-fx', '1');
+    node.setAttribute('aria-label', text);
+    node.classList.add('fx');
+    node.textContent = '';
+    var words = text.split(' ');
+    words.forEach(function (word, wi) {
+      var w = el('span', { class: 'w', 'aria-hidden': 'true' });
+      word.split('').forEach(function (c) {
+        var s = el('span', { class: 'ch', text: c });
+        s.style.setProperty('--i', n++);
+        w.append(s);
+      });
+      node.append(w);
+      if (wi < words.length - 1) node.append(' ');
+    });
+    node.addEventListener('click', function () {
+      node.classList.remove('pop');
+      void node.offsetWidth;
+      node.classList.add('pop');
+      setTimeout(function () { node.classList.remove('pop'); }, 1500);
+    });
+  }
+
+  /* Show the resume buttons only if assets/resume.pdf exists */
+  fetch('assets/resume.pdf', { method: 'HEAD' }).then(function (r) {
+    if (!r.ok) return;
+    ['resume-hero', 'resume-contact'].forEach(function (id) {
+      var a = document.getElementById(id);
+      if (a) a.hidden = false;
+    });
+  }).catch(function () { /* no resume yet */ });
+
   buildTabs();
+  Array.prototype.forEach.call(document.querySelectorAll('h1, h2'), applyFx);
   var wanted = new URLSearchParams(window.location.search).get('folder');
   var start = 0;
   FOLDERS.forEach(function (f, i) { if (f.slug === wanted) start = i; });
